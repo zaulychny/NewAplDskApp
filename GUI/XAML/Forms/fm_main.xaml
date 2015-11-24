@@ -1,0 +1,44 @@
+<Window
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Name="NewAplAppDsk"
+ Title="New APL application: WPF Temperature Converter"
+ SizeToContent="WidthandHeight">
+  <DockPanel LastChildFill="False">
+    <Menu DockPanel.Dock="Top">
+        <MenuItem Header="_Scale">
+            <MenuItem Name="mnuFahrenheit" Header="_Fahrenheit"
+             IsCheckable="True" IsChecked="True"/>
+            <MenuItem Name="mnuCentigrade" Header="_Centigrade"
+             IsCheckable="True"/>
+        </MenuItem>
+    </Menu>
+    <Grid Width="330" Margin="40,10,10,10">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="80"/>
+        <ColumnDefinition Width="60"/>
+      </Grid.ColumnDefinitions>    
+    <Label Grid.Row="0" Grid.Column="0" Content="Fahrenheit"/>
+    <Label Grid.Row="1" Grid.Column="0" Content="Centigrade"/>
+    <TextBox Name="txtFahrenheit" Grid.Row="0" Grid.Column="1"
+     Margin="5"/>
+    <TextBox Name="txtCentigrade" Grid.Row="1" Grid.Column="1"
+     Margin="5"/>
+    <Button Name="btnF2C" Grid.Row="0" Grid.Column="2"
+     Content="F>C" Margin="5"/>
+    <Button Name="btnC2F" Grid.Row="1" Grid.Column="2"
+     Content="C>F" Margin="5"/>
+    <Button Name="btnQuit" Grid.Row="2" Grid.Column="1"
+     Content="Quit" Margin="5"/>
+    </Grid>
+    <ScrollBar Name="scrTemp" DockPanel.Dock="Right"  Width="20"
+     Orientation="Vertical" Minimum="1" Maximum="213">
+    </ScrollBar>
+  </DockPanel>
+</Window>
