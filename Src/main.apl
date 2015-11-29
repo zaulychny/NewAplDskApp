@@ -42,3 +42,4 @@
  ⍝ ... Show form 
  ⍝¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 sink←win.ShowDialog
+⎕OFF
